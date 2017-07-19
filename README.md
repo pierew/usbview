@@ -2,6 +2,7 @@
 USB View Command for Linux Systems
 
 #Preview
+
 | MANUFACTURER              | PRODUCT                                 | USB-Version |
 |---------------------------|-----------------------------------------|-------------|
 | SanDisk                   | Cruzer Fit                              | 2           |
