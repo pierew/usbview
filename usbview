@@ -1,3 +1,4 @@
+#!/bin/bash
 echo "MANUFACTURER" > /tmp/usb_manu.list
 echo "PRODUCT" > /tmp/usb_prod.list
 echo "USB-Version" > /tmp/usb_bcd.list
