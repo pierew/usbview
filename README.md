@@ -1,7 +1,17 @@
 # usbview
 USB View Command for Linux Systems
 
-#Preview
+# Requirements
+ - lsusb
+ - grep
+ - tr
+ - cut
+ - awk
+ - paste
+ - sed
+ - column
+
+# Preview
 
 | MANUFACTURER              | PRODUCT                                 | USB-Version |
 |---------------------------|-----------------------------------------|-------------|
