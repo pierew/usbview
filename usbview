@@ -1,7 +1,12 @@
 echo "MANUFACTURER" > /tmp/usb_manu.list
 echo "PRODUCT" > /tmp/usb_prod.list
 echo "USB-Version" > /tmp/usb_bcd.list
+echo "Getting Manufacturer Info..."
 lsusb -v | grep iManufacturer | tr -s ' ' | cut -d' ' -f 4- >> /tmp/usb_manu.list
+echo "Getting Product Info..."
 lsusb -v | grep iProduct | tr -s ' ' | cut -d' ' -f 4- >> /tmp/usb_prod.list
+echo "Getting USB Version..."
 lsusb -v | grep bcdUSB | awk '{print $2}' | cut -d. -f1 >> /tmp/usb_bcd.list
+echo "Generating Table and Ignore Host Controllers..."
+echo "################################################"
 paste /tmp/usb_manu.list /tmp/usb_prod.list /tmp/usb_bcd.list | sed -e 's/\t/ \t/g' | column -t -s$'\t' | grep -v "Host Controller"
